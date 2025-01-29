@@ -4,8 +4,8 @@ import { socialLinks } from '../data';
 function SocialLinks({ parentComponent }) {
   return (
     <ul className={`${parentComponent === 'footer' ? 'footer-icons' : 'nav-icons'}`}>
-      {socialLinks.map((social, index) => {
-        return <SocialLink key={index} {...social} parentComponent={parentComponent} />
+      {socialLinks.map((social) => {
+        return <SocialLink key={social.id} {...social} parentComponent={parentComponent} />
       })}
     </ul>
   )

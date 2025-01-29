@@ -4,8 +4,8 @@ import {pageLinks} from "../data";
 function PageLinks({ parentComponent }) {
   return (
     <>
-      {pageLinks.map((link, index) => {
-        return <PageLink key={index} {...link} parentComponent={parentComponent} />
+      {pageLinks.map((link) => {
+        return <PageLink key={link.id} {...link} parentComponent={parentComponent} />
       })}
     </>
   )
