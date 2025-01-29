@@ -3,13 +3,9 @@ function Tour(props) {
     <article className="tour-card">
       <div className="tour-img-container">
         <img
-          src={props.imgSrc}
+          src={props.image}
           className="tour-img"
-          alt={props.imgAlt}
-          onError={(e) => {
-            console.log("Image failed to upload", props.imgSrc);
-            e.target.onerror = null;
-          }}
+          alt={props.title}
         />
         <p className="tour-date">{props.date}</p>
       </div>
@@ -17,7 +13,7 @@ function Tour(props) {
         <div className="tour-title">
           <h4>{props.title}</h4>
         </div>
-        <p>{props.content}
+        <p>{props.info}
         </p>
         <div className="tour-footer">
           <p>
@@ -26,8 +22,8 @@ function Tour(props) {
             </span>
             {props.location}
           </p>
-          <p>{props.price}</p>
-          <p>{props.duration}</p>
+          <p>{props.cost}€</p>
+          <p>{props.duration} days</p>
         </div>
       </div>
     </article>

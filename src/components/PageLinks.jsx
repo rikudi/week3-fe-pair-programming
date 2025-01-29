@@ -1,24 +1,10 @@
 import PageLink from "./PageLink";
-
-let links = [
-  {
-    "text": "home"
-  },
-  {
-    "text": "about"
-  },
-  {
-    "text": "services"
-  },
-  {
-    "text": "tours"
-  },
-] 
+import {pageLinks} from "../data";
 
 function PageLinks({ parentComponent }) {
   return (
     <>
-      {links.map((link, index) => {
+      {pageLinks.map((link, index) => {
         return <PageLink key={index} {...link} parentComponent={parentComponent} />
       })}
     </>

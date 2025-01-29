@@ -1,24 +1,10 @@
 import SocialLink from './SocialLink';
-
-let socials = [
-  {
-    "href": "https://www.facebook.com",
-    "icon": "facebook"
-  },
-  {
-    "href": "https://www.twitter.com",
-    "icon": "twitter"
-  },
-  {
-    "href": "https://www.squarespace.com/",
-    "icon": "squarespace"
-  },
-]
+import { socialLinks } from '../data';
 
 function SocialLinks({ parentComponent }) {
   return (
-    <ul className="footer-icons">
-      {socials.map((social, index) => {
+    <ul className={`${parentComponent === 'footer' ? 'footer-icons' : 'nav-icons'}`}>
+      {socialLinks.map((social, index) => {
         return <SocialLink key={index} {...social} parentComponent={parentComponent} />
       })}
     </ul>
