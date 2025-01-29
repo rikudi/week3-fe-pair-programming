@@ -1,8 +1,10 @@
-function Title() {
+function Title(props) {
+
   return (
-    <div>
-      <p className="section-dummy">Text</p>
-      <p className="section-dummy">Text</p>
+    <div className="section-title">
+      <h2>
+        {props.content} <span>{props.highlight}</span>
+      </h2>
     </div>
   );
 }
